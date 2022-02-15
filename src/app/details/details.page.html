@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <center>
+      <ion-title>détail de la Structure</ion-title>
+    </center>
+    <button (click)="goBack()" color="">Retour</button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let picture of image">
+        <img class="image" [src]="picture">
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
+  <ion-card-content>
+    <ion-card-title>
+      <ion-chip color="dark">
+        <ion-icon name="home" class="black"></ion-icon>
+        <ion-label>
+          {{titre}}
+        </ion-label>
+      </ion-chip>
+      <ion-chip *ngIf="availability" color="success">
+        <ion-label>
+          Ouverte
+        </ion-label>
+      </ion-chip>
+      <ion-chip *ngIf="!availability" color="danger">
+        <ion-label>
+          Fermée
+        </ion-label>
+      </ion-chip>
+      <ion-chip color="warning">
+        <ion-label>
+          {{category}}
+        </ion-label>
+      </ion-chip>
+      <ion-chip color="secondary">
+        <ion-icon name="city" class="primary"></ion-icon>
+        <ion-label>
+          Ville: {{city}}
+        </ion-label>
+      </ion-chip>
+      <ion-chip color="warning">
+        <span *ngIf="averageStart >=1">
+          <ion-icon class="iconYellow" name="star"></ion-icon>
+        </span>
+        <span *ngIf="averageStart >=2">
+          <ion-icon class="iconYellow" name="star"></ion-icon>
+        </span>
+        <span *ngIf="averageStart >=3">
+          <ion-icon class="iconYellow" name="star"></ion-icon>
+        </span>
+        <span *ngIf="averageStart >=4">
+          <ion-icon class="iconYellow" name="star"></ion-icon>
+        </span>
+        <span *ngIf="averageStart >=5">
+          <ion-icon class="iconYellow" name="star"></ion-icon>
+        </span>
+      </ion-chip>
+    </ion-card-title>
+  </ion-card-content>
+  <p>{{description}}</p>
+  <ion-row>
+    <ion-col *ngIf="availability">
+      <ion-button shape="round" (click)="goInscription()" type="submit" color="success" expand="block">Inscription
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

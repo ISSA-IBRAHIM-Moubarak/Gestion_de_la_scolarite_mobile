@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "nomUtilisateur": "issa",
+      "prenomUtilisateur": "ibrahim",
+      "dateNaissance": "2021-09-27",
+      "civilite": "male",
+      "telephone": "80771226",
+      "email": "issa@gmail.com",
+      "password": "1111",
+      "id": 1
+    },
+    {
+      "nomUtilisateur": "ok",
+      "prenomUtilisateur": "ok",
+      "dateNaissance": "2021-09-27",
+      "civilite": "male",
+      "telephone": "800808080",
+      "email": "ok@gmail.com",
+      "password": "ok@gmail.com",
+      "id": 2
+    },
+    {
+      "nomUtilisateur": "bon",
+      "prenomUtilisateur": "bonprenom",
+      "dateNaissance": "2021-09-28",
+      "civilite": "male",
+      "telephone": "80299229",
+      "email": "bon@gmail.com",
+      "password": "bon",
+      "id": 3
+    }
+  ],
+  "inscription": [
+    {
+      "nom": "Issa Ibrahim",
+      "prenom": "Moubarak",
+      "dateNaissance": "2021-09-28",
+      "lieuNaissance": "Niamey",
+      "genre": "male",
+      "Telephone": "80771226",
+      "email": "issaibrahim@gmail.com",
+      "id": 1
+    }
+  ]
+}

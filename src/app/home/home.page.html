@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="margin-top: 20px;">
+    <center> Nasty School</center> 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item *ngFor="let nomStructure of Structures">
+        <ion-thumbnail item-start>
+          <img [src]="nomStructure.picture[0]">
+        </ion-thumbnail>
+        <ion-label style="margin-left: 25px;">{{nomStructure.title}}</ion-label>
+        <ion-button (click)="showDetails(nomStructure)" color="primary">Voir plus</ion-button>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="goBack()" type="submit" color="danger" expand="block" shape="round">Quitter</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

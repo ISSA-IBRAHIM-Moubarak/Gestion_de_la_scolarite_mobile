@@ -1,0 +1,7 @@
+{
+  "name": "stage-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
